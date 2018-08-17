@@ -10,6 +10,8 @@
  *
  */
 
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Saira');
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -18,7 +20,7 @@ body {
   background-color: #222; }
 
 .reveal {
-  font-family: Ubuntu, "sans-serif";
+  font-family: Saira, "sans-serif";
   font-size: 40px;
   font-weight: normal;
   color: #eee; }
@@ -154,7 +156,7 @@ body {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
-  font-family: monospace;
+  font-family: "IBM Plex Mono", monospace;
   text-transform: none; }
 
 .reveal pre code {

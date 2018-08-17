@@ -17,7 +17,7 @@ blockquote:before {
 }
 
 section[data-background] h1 { 
-       background-color:rgba(233,223,213,0.7);
+       background-color:rgba(233,223,213,0.5);
        padding: 50px;
        margin: 20px;
        border-radius: 30px

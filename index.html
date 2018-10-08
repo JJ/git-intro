@@ -46,7 +46,10 @@
 	  </h1>
 	</section>
 
-	<section><h1>Usa GitHub</h1></section>
+	<section><h1>Usa GitHub</h1>
+	  <h2 class='fragment'>O GitLab, o BitBucket</h2>
+	  <aside class='notes'>Sin perjucio que puedas usar cualquier otro repo, GitLab privado o cualquier otro. GitHub es simplemente un interfaz web (como GitLab)</aside>
+	</section>
 
 	<section><h1>Crea un repositorio</h1></section>
 
@@ -79,6 +82,16 @@
 
 	    <aside class='notes'>Este último nos mostrará los ficheros bajados, pero también un fichero .gitignore oculto, y un directorio <code>git</code> oculto que es donde se encuentran efectivamente</aside> 
 	  </section>
+
+	  <section><h1>O haz un <em>fork</em> en GitHub</h1>
+	    <img src='img/fork.png' alt='fork'>
+	  </section>
+
+	  <section><code>git clone <strong>git</strong>@github.com:<strong>minick</strong>/tests-python.git</code>
+	    <code>git remote add upstream <strong>https</strong>://github.com/JJ/tests-python.git</code>
+	  </section>
+
+	  
         </section>
 
         <section>
@@ -140,6 +153,9 @@
 	  
 	  <section><h1>Sincronizando hacia arriba</h1>
 	    <pre><code>git push</code></pre>
+	    <code class='fragment'>git push <strike>origin master</strike></code>
+	    <code class='fragment'>git pull <strong>upstream master</strong></code>
+
 	  </section>
 	  
 	  <section><h1>Nuevos ficheros</h1>

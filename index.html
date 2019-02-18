@@ -26,10 +26,9 @@
     <div class="reveal">
       <div class="slides">
 	<section><h1>Git para todo el mundo</h1>
-	  <h2><code>@jjmerelo</code> para <code>@iv_gii</code>
+	  <h2><code>@jjmerelo</code> para <code>Granada Geek</code>
 	  </h2>
 	</section>
-
 
 	<section><h1><code>git</code>:</h1>
 	  <h1 class='fragment'>sistema de control</h1>
@@ -37,18 +36,22 @@
 	  <h1 class='fragment'>distribuido</h1>
 	</section>
 
-	<section><h1>Código en <strong>repo</strong>sitorios</h1>
+	<section>
+	  <h1>Código en <strong>repo</strong>sitorios</h1>
 	</section>
 	
 	<section><h1>Descarga git</h1>
 	  
 	  <h1>Es <strong>software libre</strong>
 	  </h1>
+
+	  <aside class='notes'>No solo es software libre, sino que ha hecho posible una explosión del desarrollo de software libre, sobre todo a partir del uso de GitHub como sitio estándar para depositar el código, y donde las fuentes están abiertas por omisión (al menos hasta hace poco). Software libre es el que tiene una licencia libre, que permite copiar, modificar y distribuir. Para descargarlo, usa los repositorios de tu distribución; puedes descargarte también una herramienta gráfica que incluye una línea de órdenes en windows.github.com o mac.github.com.
+	  </aside>
 	</section>
 
 	<section><h1>Usa GitHub</h1>
 	  <h2 class='fragment'>O GitLab, o BitBucket</h2>
-	  <aside class='notes'>Sin perjucio que puedas usar cualquier otro repo, GitLab privado o cualquier otro. GitHub es simplemente un interfaz web (como GitLab)</aside>
+	  <aside class='notes'>Sin perjucio que puedas usar cualquier otro repo, GitLab privado o cualquier otro. GitHub es simplemente un interfaz web (como GitLab); GitLab además es software libre.</aside>
 	</section>
 
 	<section><h1>Crea un repositorio</h1></section>
@@ -57,38 +60,46 @@
 	<section><h1>¡Es <strong>software libre</strong>!</h1>
 	  <h1 class='fragment'>⇒ Elige <strong>licencia</strong>
 	  </h1>
+
+	  <aside class='notes'>Recuerda, es software libre; eliges la licencia nada más empezar.
 	</section>
 
 	<section><h1>Describe tu proyecto</h1>
 	  <h1 class='fragment'><code>README.md</code></h1>
 	  <h2 class='fragment'>Markdown FTW</h2>
+
+	  <aside class='notes'>GitHub y Bitbucket presentan, en cada directorio, el README.md correspondiente (o en otros formatos); por eso es conveniente hacerlo en el directorio superior y también en el resot de los subdirectorios.</aside>
 	</section>
 
 	<section>
 	  <section>
 	    <h1>Clona el repo</h1>
 	    <pre><code>git clone https://github.com/nick/nombre-repo</code></pre>
-	    <aside class='notes'>Esto crea una copia del repo. Los cambios a partir de ahora serán cambios locales. Necesitas estar autorizado para leer del repo, pero todos los repos tienen habilitada la lectura en la versión https, así que esto se puede hacer.</aside>
+	    <aside class='notes'>Esto crea una copia, un <em>fork</em> del repo. Los cambios a partir de ahora serán cambios locales. Necesitas estar autorizado para leer del repo, pero todos los repos tienen habilitada la lectura en la versión https, así que esto se puede hacer en cualquier caso..</aside>
 	  </section>
 
 	  <section><h1>¡Has creado un <strong><em>fork</em></strong>!</h1>
 	    <h2 class='fragment'>Crea <em>forks</em> en GitHub</h2>
+
+	    <aside class='notes'>Puedes crearlos también en el propio sitio, lo que facilita hacer una serie de cosas, como pedir que incorporen los cambios que se han hecho al original. Podéis hacerlo con este repo, por ejemplo. Lo veremos más abajo</aside>
 	  </section>
 
-	  <section>
+	  <section><h1>Una vez clonado...</h1>
 	    <pre><code>cd nombre-repo</code></pre>
 	    <pre class='fragment'><code>git status</code></pre>
 	    <pre class='fragment'><code>ls -a</code></pre>
 
-	    <aside class='notes'>Este último nos mostrará los ficheros bajados, pero también un fichero .gitignore oculto, y un directorio <code>git</code> oculto que es donde se encuentran efectivamente</aside> 
+	    <aside class='notes'>Este último nos mostrará los ficheros bajados, pero también un fichero <code>.gitignore</code> oculto, y un directorio <code>git</code> oculto que es donde se encuentran efectivamente</aside> 
 	  </section>
 
-	  <section><h1>O haz un <em>fork</em> en GitHub</h1>
+	  <section><h1>O haz un <em>fork</em> de otro en GitHub</h1>
 	    <img src='img/fork.png' alt='fork'>
 	  </section>
 
-	  <section><code>git clone <strong>git</strong>@github.com:<strong>minick</strong>/tests-python.git</code>
-	    <code>git remote add upstream <strong>https</strong>://github.com/JJ/tests-python.git</code>
+	  <section><code>git clone <strong>git</strong>@github.com:<strong>minick</strong>/git-intro.git</code>
+	    <code>git remote add upstream <strong>https</strong>://github.com/JJ/git-intro.git</code>
+
+	    <aside class='notes'>Con este último te aseguras de mantenerte al día de los últimos cambios al repo. Conviene siempre que actualices desde <em>upstream</em> antes de subir tus actualizaciones, para evitar conflictos.</aside>
 	  </section>
 
 	  
@@ -127,9 +138,9 @@
 
 
             <aside class='notes'>Es bastante conveniente que se use
-          Linux en alguna forma para desarrollar. Se puede usar
+          Linux en alguna de sus distribuciones para desarrollar. Se puede usar
           Windows, pero muchas de estas cosas no van a ser ni fáciles
-              ni convenientes.</aside>
+              ni convenientes. De hecho, los GUIs de git te instalan una línea de órdenes similar a Linux para trabajar, pero de hecho la instalación de dependencias y todo tipo de bibliotecas es mucho más sencilla en Linux.</aside>
           </section>
           
         </section>
@@ -156,6 +167,7 @@
 	    <code class='fragment'>git push <strike>origin master</strike></code>
 	    <code class='fragment'>git pull <strong>upstream master</strong></code>
 
+	    <aside class='notes'>origin master van implícitos.</aside>
 	  </section>
 
 	  <section><h1> ← <code>upstream</code></h1>
@@ -164,6 +176,8 @@
 
 	  <section><h1>Nuevos ficheros</h1>
 	    <pre><code>git add nombre-del-fichero.md</code></pre>
+	    <strike class='fragment'><code>git add .</code></strike>
+	    <aside class='notes'>Es mejor añadir sólo los ficheros con los que se va a trabajar. Nunca se debe usar git add . ni git add * porque te puedes encontrar con sorpresas desagradables o simplemente ficheros que no deberían estar en un repo.</aside>
 	  </section>
 
 	  
@@ -184,11 +198,10 @@
 			history: true,
 			width: '99%',
 			dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
+	{ src: 'plugin/markdown/marked.js' },
+	{ src: 'plugin/markdown/markdown.js' },
 	{ src: 'plugin/notes/notes.js', async: true },
-	
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
